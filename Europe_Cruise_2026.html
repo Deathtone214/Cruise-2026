@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Europe Cruise 2026 ✈️ 🚢</title>
+<style>
+  :root {
+    --navy: #1a2744;
+    --gold: #c9a84c;
+    --ocean: #1e6b8c;
+    --sky: #4db8d8;
+    --cream: #fdf8f0;
+    --land: #2d6a4f;
+    --coral: #e76f51;
+    --soft: #f0f4f8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Georgia', serif; background: var(--cream); color: #1a1a2e; }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--navy);
+    display: flex; align-items: center; gap: 0;
+    overflow-x: auto; white-space: nowrap;
+    padding: 0 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.4);
+  }
+  nav a {
+    color: #ccd6f6; text-decoration: none;
+    padding: 14px 14px; font-size: 12px; font-family: sans-serif;
+    letter-spacing: .5px; text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    transition: all .2s; display: inline-block;
+  }
+  nav a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+  nav .logo { color: var(--gold); font-size: 16px; font-weight: bold; padding: 14px 18px 14px 10px; border-right: 1px solid #334; min-width: fit-content; }
+
+  /* HERO */
+  .hero {
+    position: relative; height: 92vh; min-height: 500px;
+    background: linear-gradient(135deg, #1a2744 0%, #1e6b8c 50%, #1a2744 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1455156218388-5e61b526818b?w=1600&q=80');
+    background-size: cover; background-position: center;
+    opacity: .35; filter: blur(1px);
+  }
+  .hero-content { position: relative; z-index: 2; padding: 20px; }
+  .hero h1 {
+    font-size: clamp(2.2rem, 6vw, 5rem);
+    color: #fff; text-shadow: 0 2px 20px rgba(0,0,0,.6);
+    letter-spacing: 2px; line-height: 1.15;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero .subtitle {
+    margin-top: 18px; font-size: clamp(1rem, 2.5vw, 1.4rem);
+    color: #ccd6f6; font-style: italic;
+    text-shadow: 0 1px 8px rgba(0,0,0,.5);
+  }
+  .hero .dates-badge {
+    margin-top: 24px; display: inline-block;
+    background: rgba(201,168,76,.2); border: 1px solid var(--gold);
+    color: var(--gold); padding: 10px 28px; border-radius: 50px;
+    font-family: sans-serif; font-size: 14px; letter-spacing: 1px;
+  }
+  .hero-stats {
+    margin-top: 32px; display: flex; gap: 28px; justify-content: center; flex-wrap: wrap;
+  }
+  .hero-stat {
+    background: rgba(255,255,255,.12); backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,.2); border-radius: 12px;
+    padding: 14px 22px; color: #fff; text-align: center;
+  }
+  .hero-stat .num { font-size: 2rem; font-weight: bold; color: var(--gold); line-height: 1; }
+  .hero-stat .lbl { font-size: 11px; font-family: sans-serif; letter-spacing: 1px; color: #aac; margin-top: 4px; }
+
+  /* SECTION LABELS */
+  .phase-label {
+    text-align: center; padding: 28px 20px 0;
+    font-family: sans-serif; font-size: 11px;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #888;
+  }
+  .section-title {
+    text-align: center; padding: 8px 20px 36px;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    color: var(--navy);
+  }
+  .divider {
+    width: 60px; height: 3px;
+    background: var(--gold); margin: 8px auto 0;
+  }
+
+  /* DESTINATION CARD */
+  .destination {
+    max-width: 1100px; margin: 0 auto 70px;
+    background: #fff; border-radius: 20px;
+    overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,.1);
+  }
+  .dest-image-wrap {
+    position: relative; height: 340px; overflow: hidden;
+  }
+  .dest-image-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform .5s;
+  }
+  .destination:hover .dest-image-wrap img { transform: scale(1.04); }
+  .dest-image-wrap .overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.65) 0%, transparent 55%);
+  }
+  .dest-header {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 22px 30px; display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  }
+  .dest-title { color: #fff; }
+  .dest-title h2 { font-size: clamp(1.5rem, 3vw, 2rem); text-shadow: 0 1px 8px rgba(0,0,0,.5); }
+  .dest-title .country { font-family: sans-serif; font-size: 12px; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; margin-bottom: 2px; }
+  .date-badge {
+    background: var(--gold); color: var(--navy);
+    padding: 8px 18px; border-radius: 30px;
+    font-family: sans-serif; font-size: 12px; font-weight: bold;
+    white-space: nowrap; box-shadow: 0 2px 10px rgba(0,0,0,.3);
+  }
+  .tag-badge {
+    font-size: 11px; padding: 4px 12px;
+    border-radius: 20px; font-family: sans-serif;
+    font-weight: bold; display: inline-block; margin-bottom: 6px;
+  }
+  .tag-land { background: #d4edda; color: #155724; }
+  .tag-cruise { background: #cce5ff; color: #004085; }
+  .tag-sea { background: #e2e3e5; color: #383d41; }
+
+  /* CONTENT BODY */
+  .dest-body { padding: 30px 32px 36px; }
+  .dest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media(max-width: 750px) { .dest-grid { grid-template-columns: 1fr; } .dest-body { padding: 22px 18px 28px; } }
+
+  /* CARDS */
+  .info-card {
+    background: var(--soft); border-radius: 14px;
+    padding: 20px 22px; border-left: 4px solid var(--ocean);
+  }
+  .info-card.gold-border { border-left-color: var(--gold); }
+  .info-card.green-border { border-left-color: var(--land); }
+  .info-card.coral-border { border-left-color: var(--coral); }
+  .card-title {
+    font-family: sans-serif; font-size: 11px;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: #888; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;
+  }
+  .card-title .icon { font-size: 14px; }
+
+  /* HOTEL */
+  .hotel-name { font-size: 1.05rem; font-weight: bold; color: var(--navy); margin-bottom: 6px; }
+  .hotel-note { font-size: 13px; color: #555; font-style: italic; }
+  .map-link {
+    display: inline-flex; align-items: center; gap: 5px;
+    margin-top: 10px; font-family: sans-serif; font-size: 12px;
+    color: var(--ocean); text-decoration: none; font-weight: 600;
+    padding: 5px 12px; background: rgba(30,107,140,.08);
+    border-radius: 20px; transition: all .2s;
+  }
+  .map-link:hover { background: var(--ocean); color: #fff; }
+
+  /* ACTIVITIES */
+  .activities-list { list-style: none; }
+  .activities-list li {
+    padding: 9px 0; border-bottom: 1px solid #e5e9f0;
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  }
+  .activities-list li:last-child { border-bottom: none; }
+  .act-name { font-size: 14px; color: #1a1a2e; flex: 1; }
+  .act-links { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
+  .act-link {
+    font-size: 11px; font-family: sans-serif;
+    padding: 3px 10px; border-radius: 12px;
+    text-decoration: none; font-weight: 600;
+    transition: all .2s; white-space: nowrap;
+  }
+  .act-link.web { background: #e8f4fd; color: #0066cc; border: 1px solid #b8d4e8; }
+  .act-link.web:hover { background: #0066cc; color: #fff; }
+  .act-link.map { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+  .act-link.map:hover { background: #856404; color: #fff; }
+
+  /* TRANSPORT */
+  .transport-item {
+    display: flex; gap: 10px; align-items: flex-start;
+    padding: 7px 0; border-bottom: 1px solid #e5e9f0; font-size: 13px;
+  }
+  .transport-item:last-child { border-bottom: none; }
+  .transport-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .transport-text { color: #333; line-height: 1.5; }
+  .transport-cost { color: var(--land); font-weight: bold; font-family: sans-serif; }
+
+  /* EMBASSY */
+  .embassy-name { font-size: 14px; font-weight: bold; color: var(--navy); margin-bottom: 4px; }
+  .embassy-addr { font-size: 13px; color: #555; line-height: 1.6; }
+  .embassy-links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  .emb-link {
+    font-size: 12px; font-family: sans-serif; font-weight: 600;
+    padding: 5px 14px; border-radius: 20px; text-decoration: none;
+    transition: all .2s;
+  }
+  .emb-link.web { background: #1a2744; color: #fff; }
+  .emb-link.web:hover { background: var(--gold); color: var(--navy); }
+  .emb-link.map { background: #e8f4fd; color: #0066cc; border: 1px solid #b8d4e8; }
+  .emb-link.map:hover { background: #0066cc; color: #fff; }
+
+  /* FULL WIDTH CARDS */
+  .full-width { grid-column: 1 / -1; }
+
+  /* FLIGHT / CRUISE SPECIAL SECTIONS */
+  .special-card {
+    max-width: 1100px; margin: 0 auto 50px;
+    border-radius: 20px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,.12);
+  }
+  .flight-card {
+    background: linear-gradient(135deg, var(--navy) 0%, #2d4a7a 100%);
+    padding: 36px 40px; color: #fff;
+    display: flex; align-items: center; gap: 30px; flex-wrap: wrap;
+  }
+  .flight-icon { font-size: 60px; opacity: .8; }
+  .flight-info h3 { font-size: 1.4rem; color: var(--gold); margin-bottom: 6px; }
+  .flight-info p { color: #ccd6f6; font-size: 14px; line-height: 1.7; font-family: sans-serif; }
+  .flight-route {
+    display: flex; align-items: center; gap: 12px; margin: 14px 0;
+    font-family: sans-serif;
+  }
+  .flight-city { font-size: 1.6rem; font-weight: bold; color: #fff; }
+  .flight-arrow { color: var(--gold); font-size: 1.4rem; }
+  .flight-detail { font-size: 12px; color: #aac; letter-spacing: 1px; margin-top: 2px; }
+
+  .cruise-banner {
+    background: linear-gradient(135deg, #0d3a5c 0%, #1e6b8c 50%, #4db8d8 100%);
+    padding: 44px 40px; text-align: center; color: #fff;
+    position: relative; overflow: hidden;
+  }
+  .cruise-banner::before {
+    content: '🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    font-size: 30px; letter-spacing: 8px; opacity: .15;
+  }
+  .cruise-banner h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 8px; }
+  .cruise-banner p { color: #cce8f4; font-family: sans-serif; font-size: 14px; }
+  .cruise-dates-row {
+    display: flex; justify-content: center; gap: 16px;
+    margin-top: 24px; flex-wrap: wrap;
+  }
+  .cruise-stop {
+    background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
+    border-radius: 12px; padding: 12px 18px; text-align: center;
+    backdrop-filter: blur(6px); min-width: 120px;
+  }
+  .cruise-stop .stop-date { font-size: 11px; color: var(--sky); font-family: sans-serif; letter-spacing: 1px; }
+  .cruise-stop .stop-name { font-size: 13px; font-weight: bold; margin-top: 4px; }
+
+  /* AT SEA */
+  .at-sea {
+    max-width: 1100px; margin: 0 auto 50px;
+    background: linear-gradient(135deg, #0d3a5c, #1e6b8c);
+    border-radius: 20px; padding: 30px 36px;
+    color: #fff; display: flex; align-items: center; gap: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.15);
+  }
+  .at-sea .sea-icon { font-size: 48px; }
+  .at-sea h3 { font-size: 1.2rem; color: var(--sky); }
+  .at-sea p { font-size: 13px; color: #ccd6f6; font-family: sans-serif; margin-top: 4px; line-height: 1.6; }
+
+  /* SECTION PADDING */
+  .section-wrap { padding: 48px 20px 10px; }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy); color: #ccd6f6;
+    text-align: center; padding: 30px 20px;
+    font-family: sans-serif; font-size: 13px; line-height: 2;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  /* PHASE BANNER */
+  .phase-banner {
+    background: var(--navy); color: var(--gold);
+    text-align: center; padding: 18px; font-family: sans-serif;
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">🚢 Europe 2026</div>
+  <a href="#milan">Milan</a>
+  <a href="#lugano">Lugano</a>
+  <a href="#bolzano">Dolomites</a>
+  <a href="#bologna">Bologna</a>
+  <a href="#venice">Venice</a>
+  <a href="#cruise">Cruise</a>
+  <a href="#kotor">Kotor</a>
+  <a href="#athens">Athens</a>
+  <a href="#santorini">Santorini</a>
+  <a href="#zadar">Zadar</a>
+  <a href="#lisbon">Lisbon</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1>Europe Cruise <span>2026</span></h1>
+    <p class="subtitle">Milan · Lugano · Dolomites · Bologna · Venice · Adriatic & Mediterranean Sea</p>
+    <div class="dates-badge">✈️ July 10 – July 26, 2026 &nbsp;·&nbsp; 17 Days</div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">7</div><div class="lbl">Countries</div></div>
+      <div class="hero-stat"><div class="num">10</div><div class="lbl">Destinations</div></div>
+      <div class="hero-stat"><div class="num">8</div><div class="lbl">Cruise Days</div></div>
+      <div class="hero-stat"><div class="num">17</div><div class="lbl">Total Days</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLIGHT OUT -->
+<div class="section-wrap">
+  <div class="special-card" id="flight-out">
+    <div class="flight-card">
+      <div class="flight-icon">✈️</div>
+      <div class="flight-info">
+        <h3>Departure Flight</h3>
+        <div class="flight-route">
+          <div>
+            <div class="flight-city">ORD</div>
+            <div class="flight-detail">Chicago O'Hare</div>
+          </div>
+          <div class="flight-arrow">✈ ──────</div>
+          <div>
+            <div class="flight-city">MXP</div>
+            <div class="flight-detail">Milan Malpensa</div>
+          </div>
+        </div>
+        <p>📅 Friday, July 10, 2026 &nbsp;·&nbsp; 🛫 Recommended: <strong>TAP Air Portugal</strong> (most affordable option)<br>
+        💡 Book early for best fares — transatlantic summer flights fill up fast.</p>
+        <a href="https://www.flytap.com" target="_blank" style="display:inline-block;margin-top:12px;padding:8px 20px;background:var(--gold);color:var(--navy);border-radius:20px;font-family:sans-serif;font-size:13px;font-weight:bold;text-decoration:none;">🌐 TAP Air Portugal</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PRE-CRUISE PHASE ===== -->
+<div class="phase-banner">🏙️ Pre-Cruise Land Exploration</div>
+
+<!-- MILAN -->
+<div id="milan" class="section-wrap">
+  <div class="destination">
+    <div class="dest-image-wrap">
+      <img src="https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=1200&q=80" alt="Milan Cathedral" onerror="this.src='https://images.unsplash.com/photo-1525874684015-58379d421a52?w=1200&q=80'">
+      <div class="overlay"></div>
+      <div class="dest-header">
+        <div class="dest-title">
+          <div class="country">🇮🇹 Italy</div>
+          <span class="tag-badge tag-land">Land Stay · 3 Nights</span>
+          <h2>Milan</h2>
+        </div>
+        <div class="date-badge">July 11–13, 2026</div>
+      </div>
+    </div>
+    <div class="dest-body">
+      <div class="dest-grid">
+        <!-- Hotel -->
+        <div class="info-card gold-border">
+          <div class="card-title"><span class="icon">🏨</span> Hotel</div>
+          <div class="hotel-name">IH Hotels Milano Gioia</div>
+          <div class="hotel-note">✅ Breakfast included</div>
+          <a class="map-link" href="https://www.google.com/maps/search/IH+Hotels+Milano+Gioia" target="_blank">📍 View on Google Maps</a>
+        </div>
+
+        <!-- Transport to Milan -->
+        <div class="info-card">
+          <div class="card-title"><span class="icon">🚌</span> Getting Around Milan</div>
+          <div class="transport-item"><span class="transport-icon">🚇</span><span class="transport-text">Metro: Lines M1, M2, M3, M5 — <span class="transport-cost">€2.20/ride</span>, 24h pass <span class="transport-cost">€7.60</span></span></div>
+          <div class="transport-item"><span class="transport-icon">🚌</span><span class="transport-text">Tram & Bus: Extensive network covers the whole city — same fare as metro</span></div>
+          <div class="transport-item"><span class="transport-icon">🚶</span><span class="transport-text">City center is very walkable — Duomo to Sforza Castle ~20 min on foot</span></div>
+          <div class="transport-item"><span class="transport-icon">🚂</span><span class="transport-text">Airport to hotel: Malpensa Express train to Centrale station — <span class="transport-cost">€13</span>, 52 min</span></div>
+        </div>
+
+        <!-- Activities -->
+        <div class="info-card full-width green-border">
+          <div class="card-title"><span class="icon">🗺️</span> Activities — Sunday July 12</div>
+          <ul class="activities-list">
+            <li>
+              <span class="act-name">⛪ Milan Cathedral (Duomo di Milano)</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.duomomilano.it/en/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Milan+Cathedral+Duomo+di+Milano" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🛍️ Galleria Vittorio Emanuele II — Italy's oldest shopping arcade</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.ingalleria.com/en" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Galleria+Vittorio+Emanuele+II+Milan" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🖼️ Santa Maria delle Grazie — Church with The Last Supper mural</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://cenacolovinciano.org/en/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Santa+Maria+delle+Grazie+Milan" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🏰 Sforza Castle (Castello Sforzesco)</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.milanocastello.it/en/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Sforza+Castle+Milan" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🛶 Navigli District — Cafés, boutiques & canal walks</span>
+              <span class="act-links">
+                <a class="act-link map" href="https://www.google.com/maps/search/Navigli+District+Milan" target="_blank">📍 Map</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Embassy -->
+        <div class="info-card coral-border full-width">
+          <div class="card-title"><span class="icon">🇺🇸</span> U.S. Consulate General — Italy</div>
+          <div class="embassy-name">U.S. Consulate General Milan</div>
+          <div class="embassy-addr">📍 Via Principe Amedeo, 2/10, 20121 Milano, Italy<br>📞 (+39) 02.290351</div>
+          <div class="embassy-links">
+            <a class="emb-link web" href="https://it.usembassy.gov/embassy-consulates/milan/" target="_blank">🌐 Official Site</a>
+            <a class="emb-link map" href="https://www.google.com/maps/search/US+Consulate+Via+Principe+Amedeo+Milan+Italy" target="_blank">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LUGANO -->
+<div id="lugano" class="section-wrap">
+  <div class="destination">
+    <div class="dest-image-wrap">
+      <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=80" alt="Lake Lugano" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80'">
+      <div class="overlay"></div>
+      <div class="dest-header">
+        <div class="dest-title">
+          <div class="country">🇨🇭 Switzerland</div>
+          <span class="tag-badge tag-land">Day Trip from Milan</span>
+          <h2>Lugano</h2>
+        </div>
+        <div class="date-badge">Monday, July 13, 2026</div>
+      </div>
+    </div>
+    <div class="dest-body">
+      <div class="dest-grid">
+        <div class="info-card">
+          <div class="card-title"><span class="icon">🚂</span> Getting There (from Milan)</div>
+          <div class="transport-item"><span class="transport-icon">🚄</span><span class="transport-text">Train: Milan Centrale → Lugano — <span class="transport-cost">~$22–30</span> · ~1h 15min · ~17 trains/day (Trenitalia / SBB)</span></div>
+          <div class="transport-item"><span class="transport-icon">🚌</span><span class="transport-text">FlixBus: Budget option — <span class="transport-cost">~$12–18</span> · book at <strong>flixbus.com</strong></span></div>
+          <div class="transport-item"><span class="transport-icon">💡</span><span class="transport-text">Tip: Book Swiss trains at <a href="https://www.sbb.ch/en" target="_blank" style="color:var(--ocean)">sbb.ch</a> or Trenitalia for best fares</span></div>
+        </div>
+
+        <div class="info-card">
+          <div class="card-title"><span class="icon">🗺️</span> Getting Around Lugano</div>
+          <div class="transport-item"><span class="transport-icon">🚡</span><span class="transport-text">Funicular to Monte San Salvatore — Runs every 30 min; <span class="transport-cost">~CHF 20 roundtrip</span></span></div>
+          <div class="transport-item"><span class="transport-icon">⛵</span><span class="transport-text">Lake boat cruise — Multiple routes; <span class="transport-cost">CHF 15–40</span> depending on route</span></div>
+          <div class="transport-item"><span class="transport-icon">🚶</span><span class="transport-text">Old town is compact and fully walkable from the train station (~10 min)</span></div>
+        </div>
+
+        <div class="info-card full-width green-border">
+          <div class="card-title"><span class="icon">🗺️</span> Activities</div>
+          <ul class="activities-list">
+            <li>
+              <span class="act-name">🏘️ Explore Lugano's Old Town — piazzas, art galleries, waterfront promenade</span>
+              <span class="act-links"><a class="act-link map" href="https://www.google.com/maps/search/Lugano+old+town+Switzerland" target="_blank">📍 Map</a></span>
+            </li>
+            <li>
+              <span class="act-name">🏔️ Monte San Salvatore — Funicular ride with panoramic lake views</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.montesansalvatore.ch/en/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Monte+San+Salvatore+Lugano" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">⛵ Boat Ride / Cruise on Lake Lugano</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.lakelugano.ch/en/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Lake+Lugano+boat+tours" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">⛪ Santa Maria degli Angioli Church</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.luganoregion.com/en/attractions/detail/santa-maria-degli-angioli" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Santa+Maria+degli+Angioli+Lugano" target="_blank">📍 Map</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card coral-border full-width">
+          <div class="card-title"><span class="icon">🇺🇸</span> U.S. Embassy — Switzerland</div>
+          <div class="embassy-name">U.S. Embassy Bern (Nearest agency: Zürich Consular Agent)</div>
+          <div class="embassy-addr">📍 Sulgeneckstrasse 19, CH-3007 Bern, Switzerland &nbsp;|&nbsp; Zürich Agent: Dufourstrasse 101, 8008 Zürich<br>📞 +41 31 357 70 11</div>
+          <div class="embassy-links">
+            <a class="emb-link web" href="https://ch.usembassy.gov/" target="_blank">🌐 Official Site</a>
+            <a class="emb-link map" href="https://www.google.com/maps/search/US+Embassy+Sulgeneckstrasse+19+Bern+Switzerland" target="_blank">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOLZANO / DOLOMITES -->
+<div id="bolzano" class="section-wrap">
+  <div class="destination">
+    <div class="dest-image-wrap">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80" alt="Dolomites" onerror="this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80'">
+      <div class="overlay"></div>
+      <div class="dest-header">
+        <div class="dest-title">
+          <div class="country">🇮🇹 Italy — South Tyrol</div>
+          <span class="tag-badge tag-land">Land Stay · 2 Nights</span>
+          <h2>Bolzano / Dolomites</h2>
+        </div>
+        <div class="date-badge">July 14–15, 2026</div>
+      </div>
+    </div>
+    <div class="dest-body">
+      <div class="dest-grid">
+        <div class="info-card gold-border">
+          <div class="card-title"><span class="icon">🏨</span> Hotel</div>
+          <div class="hotel-name">Four Points by Sheraton Bolzano</div>
+          <div class="hotel-note">✅ Breakfast included</div>
+          <a class="map-link" href="https://www.google.com/maps/search/Four+Points+by+Sheraton+Bolzano+Italy" target="_blank">📍 View on Google Maps</a>
+        </div>
+
+        <div class="info-card">
+          <div class="card-title"><span class="icon">🚂</span> Getting There (from Milan)</div>
+          <div class="transport-item"><span class="transport-icon">🚄</span><span class="transport-text">Train: Milan Centrale → Bolzano — <span class="transport-cost">~$12–25</span> · ~3 hrs · Frecciarossa or Intercity</span></div>
+          <div class="transport-item"><span class="transport-icon">🚌</span><span class="transport-text">Flixbus/Regional Bus: Budget option — <span class="transport-cost">~$10–18</span></span></div>
+          <div class="transport-item"><span class="transport-icon">🚗</span><span class="transport-text">Car rental: Best for Dolomites day trips — roads scenic but require driver; ~€50–80/day</span></div>
+        </div>
+
+        <div class="info-card full-width green-border">
+          <div class="card-title"><span class="icon">🗺️</span> Activities — July 14 & 15</div>
+          <ul class="activities-list">
+            <li>
+              <span class="act-name">🏔️ Seceda — Ortisei cable car & panoramic ridge walk (Wed July 15)</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.seceda.it/en/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Seceda+Ortisei+Dolomites+Italy" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">⛪ Santa Magdalena — Church of St. Johann (45 min drive from Ortisei)</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.suedtirol.info/en/experiences/culture/churches-monasteries/church-st-john-in-ranui" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Santa+Magdalena+Church+St+Johann+Dolomites" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🏞️ Lago di Braies (Pragser Wildsee) — turquoise alpine lake</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.lagodibraies.com/en/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Lago+di+Braies+Dolomites+Italy" target="_blank">📍 Map</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card coral-border full-width">
+          <div class="card-title"><span class="icon">🇺🇸</span> U.S. Consulate General — Italy (covers Bolzano/South Tyrol)</div>
+          <div class="embassy-name">U.S. Consulate General Milan</div>
+          <div class="embassy-addr">📍 Via Principe Amedeo, 2/10, 20121 Milano, Italy<br>📞 (+39) 02.290351</div>
+          <div class="embassy-links">
+            <a class="emb-link web" href="https://it.usembassy.gov/embassy-consulates/milan/" target="_blank">🌐 Official Site</a>
+            <a class="emb-link map" href="https://www.google.com/maps/search/US+Consulate+Via+Principe+Amedeo+Milan+Italy" target="_blank">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOLOGNA -->
+<div id="bologna" class="section-wrap">
+  <div class="destination">
+    <div class="dest-image-wrap">
+      <img src="https://images.unsplash.com/photo-1555992336-03a23c7b20ee?w=1200&q=80" alt="Bologna" onerror="this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80'">
+      <div class="overlay"></div>
+      <div class="dest-header">
+        <div class="dest-title">
+          <div class="country">🇮🇹 Italy — Emilia-Romagna</div>
+          <span class="tag-badge tag-land">Land Stay · 2 Nights</span>
+          <h2>Bologna</h2>
+        </div>
+        <div class="date-badge">July 16–17, 2026</div>
+      </div>
+    </div>
+    <div class="dest-body">
+      <div class="dest-grid">
+        <div class="info-card gold-border">
+          <div class="card-title"><span class="icon">🏨</span> Hotel</div>
+          <div class="hotel-name">Best Western Bologna</div>
+          <div class="hotel-note">✅ Breakfast included &nbsp;·&nbsp; 🍝 Must eat: Tagliatelle al Ragù Bolognese!</div>
+          <a class="map-link" href="https://www.google.com/maps/search/Best+Western+Bologna+Italy" target="_blank">📍 View on Google Maps</a>
+        </div>
+
+        <div class="info-card">
+          <div class="card-title"><span class="icon">🚂</span> Getting There (from Bolzano)</div>
+          <div class="transport-item"><span class="transport-icon">🚄</span><span class="transport-text">Train: Bolzano → Bologna — <span class="transport-cost">~$15–30</span> · ~2.5 hrs · Frecciarossa or Intercity</span></div>
+          <div class="transport-item"><span class="transport-icon">💡</span><span class="transport-text">Book at <a href="https://www.trenitalia.com/en.html" target="_blank" style="color:var(--ocean)">Trenitalia</a> or <a href="https://www.italotreno.it/en" target="_blank" style="color:var(--ocean)">Italo</a> — compare both for best price</span></div>
+          <div class="transport-item"><span class="transport-icon">🚶</span><span class="transport-text">Bologna city center is very walkable — historic porticoes link most sights</span></div>
+        </div>
+
+        <div class="info-card full-width green-border">
+          <div class="card-title"><span class="icon">🗺️</span> Activities — July 16</div>
+          <ul class="activities-list">
+            <li>
+              <span class="act-name">🏛️ Piazza Maggiore — Heart of Bologna with Neptune Fountain</span>
+              <span class="act-links">
+                <a class="act-link map" href="https://www.google.com/maps/search/Piazza+Maggiore+Bologna" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">⛪ Basilica di San Petronio & The Archiginnasio</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.basilicadisanpetronio.org/en/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Basilica+di+San+Petronio+Bologna" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🎓 University of Bologna — Oldest university in Europe (est. 1088)</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.unibo.it/en" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/University+of+Bologna+Italy" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🗼 The Two Towers — Asinelli & Garisenda (medieval towers)</span>
+              <span class="act-links">
+                <a class="act-link map" href="https://www.google.com/maps/search/Two+Towers+Asinelli+Garisenda+Bologna" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🏛️ Walk under the Historic Porticoes (UNESCO World Heritage)</span>
+              <span class="act-links">
+                <a class="act-link map" href="https://www.google.com/maps/search/Historic+Porticoes+Bologna+Italy" target="_blank">📍 Map</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card coral-border full-width">
+          <div class="card-title"><span class="icon">🇺🇸</span> U.S. Consulate General — Italy (covers Bologna)</div>
+          <div class="embassy-name">U.S. Consulate General Milan</div>
+          <div class="embassy-addr">📍 Via Principe Amedeo, 2/10, 20121 Milano, Italy &nbsp;|&nbsp; 📞 (+39) 02.290351</div>
+          <div class="embassy-links">
+            <a class="emb-link web" href="https://it.usembassy.gov/embassy-consulates/milan/" target="_blank">🌐 Official Site</a>
+            <a class="emb-link map" href="https://www.google.com/maps/search/US+Consulate+Via+Principe+Amedeo+Milan+Italy" target="_blank">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VENICE -->
+<div id="venice" class="section-wrap">
+  <div class="destination">
+    <div class="dest-image-wrap">
+      <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=1200&q=80" alt="Venice Canal" onerror="this.src='https://images.unsplash.com/photo-1533105079780-92b9be482077?w=1200&q=80'">
+      <div class="overlay"></div>
+      <div class="dest-header">
+        <div class="dest-title">
+          <div class="country">🇮🇹 Italy — Veneto</div>
+          <span class="tag-badge tag-land">Day Trip from Bologna</span>
+          <h2>Venice</h2>
+        </div>
+        <div class="date-badge">Friday, July 17, 2026</div>
+      </div>
+    </div>
+    <div class="dest-body">
+      <div class="dest-grid">
+        <div class="info-card">
+          <div class="card-title"><span class="icon">🚂</span> Getting There (from Bologna)</div>
+          <div class="transport-item"><span class="transport-icon">🚄</span><span class="transport-text">Train: Bologna → Venezia S. Lucia — <span class="transport-cost">~$14–38</span> · ~1.5 hrs · Frecciarossa runs hourly</span></div>
+          <div class="transport-item"><span class="transport-icon">💡</span><span class="transport-text">Book at <a href="https://www.trenitalia.com/en.html" target="_blank" style="color:var(--ocean)">Trenitalia</a> or <a href="https://www.italotreno.it/en" target="_blank" style="color:var(--ocean)">Italo</a></span></div>
+        </div>
+
+        <div class="info-card">
+          <div class="card-title"><span class="icon">🚤</span> Getting Around Venice</div>
+          <div class="transport-item"><span class="transport-icon">🚤</span><span class="transport-text">Vaporetto (water bus): <span class="transport-cost">€9.50 single / €25 24h pass</span> — Line 1 goes whole Grand Canal</span></div>
+          <div class="transport-item"><span class="transport-icon">🛶</span><span class="transport-text">Gondola: <span class="transport-cost">~€80 / 30 min</span> (shared gondolas cheaper) — iconic experience</span></div>
+          <div class="transport-item"><span class="transport-icon">🚶</span><span class="transport-text">Walking is the best way to explore — Venice is car-free!</span></div>
+        </div>
+
+        <div class="info-card full-width green-border">
+          <div class="card-title"><span class="icon">🗺️</span> Activities — July 17</div>
+          <ul class="activities-list">
+            <li>
+              <span class="act-name">🛶 Gondola Ride on the canals</span>
+              <span class="act-links"><a class="act-link map" href="https://www.google.com/maps/search/Venice+gondola+rides" target="_blank">📍 Map</a></span>
+            </li>
+            <li>
+              <span class="act-name">🏛️ Doge's Palace (Palazzo Ducale)</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://palazzoducale.visitmuve.it/en/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Doges+Palace+Venice" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🌊 The Grand Canal — largest canal in Venice</span>
+              <span class="act-links"><a class="act-link map" href="https://www.google.com/maps/search/Grand+Canal+Venice" target="_blank">📍 Map</a></span>
+            </li>
+            <li>
+              <span class="act-name">🔗 Bridge of Sighs (Ponte dei Sospiri)</span>
+              <span class="act-links"><a class="act-link map" href="https://www.google.com/maps/search/Bridge+of+Sighs+Venice" target="_blank">📍 Map</a></span>
+            </li>
+            <li>
+              <span class="act-name">📚 Acqua Alta Bookshop — Venice's famous flooded bookstore</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.libreriacquaalta.it/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Acqua+Alta+Bookshop+Venice" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🌉 Rialto Bridge (Ponte di Rialto)</span>
+              <span class="act-links"><a class="act-link map" href="https://www.google.com/maps/search/Rialto+Bridge+Venice" target="_blank">📍 Map</a></span>
+            </li>
+            <li>
+              <span class="act-name">🕌 St. Mark's Square & Basilica (Piazza San Marco)</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.basilicasanmarco.it/en/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/St+Marks+Square+Venice" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🍦 Suso Gelatoteca — best gelato in Venice</span>
+              <span class="act-links"><a class="act-link map" href="https://www.google.com/maps/search/Suso+gelato+Venice+Italy" target="_blank">📍 Map</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card coral-border full-width">
+          <div class="card-title"><span class="icon">🇺🇸</span> U.S. Consulate General — Italy (covers Venice)</div>
+          <div class="embassy-name">U.S. Consulate General Milan</div>
+          <div class="embassy-addr">📍 Via Principe Amedeo, 2/10, 20121 Milano, Italy &nbsp;|&nbsp; 📞 (+39) 02.290351</div>
+          <div class="embassy-links">
+            <a class="emb-link web" href="https://it.usembassy.gov/embassy-consulates/milan/" target="_blank">🌐 Official Site</a>
+            <a class="emb-link map" href="https://www.google.com/maps/search/US+Consulate+Via+Principe+Amedeo+Milan+Italy" target="_blank">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CRUISE PHASE ===== -->
+<div id="cruise">
+  <div class="special-card" style="margin: 0 20px 50px; max-width: 1100px; margin-left: auto; margin-right: auto;">
+    <div class="cruise-banner">
+      <p style="letter-spacing:3px; font-size:12px; text-transform:uppercase; color:var(--sky); margin-bottom:10px;">🚢 Cruise Embarkation</p>
+      <h2>Setting Sail from Venice</h2>
+      <p>Saturday, July 18, 2026 &nbsp;·&nbsp; Adriatic & Mediterranean Sea</p>
+      <div class="cruise-dates-row">
+        <div class="cruise-stop"><div class="stop-date">July 18</div><div class="stop-name">🚢 Embarkation<br>Venice</div></div>
+        <div class="cruise-stop"><div class="stop-date">July 19</div><div class="stop-name">⚓ Kotor<br>Montenegro</div></div>
+        <div class="cruise-stop"><div class="stop-date">July 20</div><div class="stop-name">🌊 At Sea</div></div>
+        <div class="cruise-stop"><div class="stop-date">July 21</div><div class="stop-name">⚓ Athens<br>Greece</div></div>
+        <div class="cruise-stop"><div class="stop-date">July 22</div><div class="stop-name">⚓ Santorini<br>Greece</div></div>
+        <div class="cruise-stop"><div class="stop-date">July 23</div><div class="stop-name">🌊 At Sea</div></div>
+        <div class="cruise-stop"><div class="stop-date">July 24</div><div class="stop-name">⚓ Zadar<br>Croatia</div></div>
+        <div class="cruise-stop"><div class="stop-date">July 25</div><div class="stop-name">🏁 Disembark<br>Lisbon</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BAY OF KOTOR -->
+<div id="kotor" class="section-wrap">
+  <div class="destination">
+    <div class="dest-image-wrap">
+      <img src="https://images.unsplash.com/photo-1567696153798-9111f9cd3d0d?w=1200&q=80" alt="Bay of Kotor" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80'">
+      <div class="overlay"></div>
+      <div class="dest-header">
+        <div class="dest-title">
+          <div class="country">🇲🇪 Montenegro</div>
+          <span class="tag-badge tag-cruise">Cruise Day 2 · Port Stop</span>
+          <h2>Bay of Kotor</h2>
+        </div>
+        <div class="date-badge">Sun July 19 · 12pm–8pm</div>
+      </div>
+    </div>
+    <div class="dest-body">
+      <div class="dest-grid">
+        <div class="info-card">
+          <div class="card-title"><span class="icon">🚌</span> Port Transportation</div>
+          <div class="transport-item"><span class="transport-icon">🚶</span><span class="transport-text">Walk: Cruise port is only <strong>200m</strong> from Old Town — perfectly walkable!</span></div>
+          <div class="transport-item"><span class="transport-icon">🚕</span><span class="transport-text">Metered taxi: <span class="transport-cost">€0.80/km + €0.50 start</span> — use Red Taxi Kotor app</span></div>
+          <div class="transport-item"><span class="transport-icon">🚌</span><span class="transport-text">Bus: Station 10-min walk from port; service to nearby towns <span class="transport-cost">€2–5</span></span></div>
+          <div class="transport-item"><span class="transport-icon">💡</span><span class="transport-text">Old Town is pedestrian-only — no cars inside the walls</span></div>
+        </div>
+
+        <div class="info-card green-border">
+          <div class="card-title"><span class="icon">🗺️</span> Activities</div>
+          <ul class="activities-list">
+            <li>
+              <span class="act-name">🏰 Explore Kotor Old Town (UNESCO World Heritage Site)</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.visit-montenegro.com/destinations/kotor/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Kotor+Old+Town+Montenegro" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">⛰️ Climb to St. John's Fortress (Tvrđava Sv. Ivana) — ~1,200+ steps, stunning views</span>
+              <span class="act-links">
+                <a class="act-link map" href="https://www.google.com/maps/search/San+Giovanni+Fortress+Kotor+Montenegro" target="_blank">📍 Map</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card coral-border full-width">
+          <div class="card-title"><span class="icon">🇺🇸</span> U.S. Embassy — Montenegro</div>
+          <div class="embassy-name">U.S. Embassy Podgorica</div>
+          <div class="embassy-addr">📍 Džona Džeksona 2, 81000 Podgorica, Montenegro &nbsp;|&nbsp; 📞 +382 (0)20 410 500</div>
+          <div class="embassy-links">
+            <a class="emb-link web" href="https://me.usembassy.gov/" target="_blank">🌐 Official Site</a>
+            <a class="emb-link map" href="https://www.google.com/maps/search/US+Embassy+Podgorica+Montenegro" target="_blank">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AT SEA DAY 1 -->
+<div class="section-wrap">
+  <div class="at-sea">
+    <div class="sea-icon">🌊</div>
+    <div>
+      <h3>Day at Sea — Monday, July 20</h3>
+      <p>Relax on deck, enjoy ship amenities, spa, pools, and dining as you sail toward Greece. Watch for the Greek islands on the horizon as sunset approaches.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ATHENS -->
+<div id="athens" class="section-wrap">
+  <div class="destination">
+    <div class="dest-image-wrap">
+      <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?w=1200&q=80" alt="Acropolis Athens" onerror="this.src='https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=1200&q=80'">
+      <div class="overlay"></div>
+      <div class="dest-header">
+        <div class="dest-title">
+          <div class="country">🇬🇷 Greece</div>
+          <span class="tag-badge tag-cruise">Cruise Day 4 · Port Stop</span>
+          <h2>Athens</h2>
+        </div>
+        <div class="date-badge">Tue July 21 · 7am–7pm</div>
+      </div>
+    </div>
+    <div class="dest-body">
+      <div class="dest-grid">
+        <div class="info-card">
+          <div class="card-title"><span class="icon">🚌</span> Port → City (Piraeus Port)</div>
+          <div class="transport-item"><span class="transport-icon">🚇</span><span class="transport-text">Metro Line 1 (Green): Piraeus → Monastiraki — <span class="transport-cost">€1.20</span> · 15 min · ⭐ Best Option!</span></div>
+          <div class="transport-item"><span class="transport-icon">🚌</span><span class="transport-text">X80 Express Bus: Port → Syntagma — <span class="transport-cost">€4.10 / 24h pass</span> · Every 35–40 min</span></div>
+          <div class="transport-item"><span class="transport-icon">🚕</span><span class="transport-text">Taxi: <span class="transport-cost">~€20–30</span> to city center · 20–40 min (traffic varies)</span></div>
+          <div class="transport-item"><span class="transport-icon">💡</span><span class="transport-text">Apps: OASA, Moovit or Citymapper for real-time transit info</span></div>
+        </div>
+
+        <div class="info-card green-border">
+          <div class="card-title"><span class="icon">🗺️</span> Activities</div>
+          <ul class="activities-list">
+            <li>
+              <span class="act-name">🏛️ Acropolis & Parthenon — the iconic ancient citadel</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.theacropolismuseum.gr/en" target="_blank">🌐 Museum</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Acropolis+Athens+Greece" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🛒 Monastiraki Flea Market — souvenirs, antiques, local goods</span>
+              <span class="act-links"><a class="act-link map" href="https://www.google.com/maps/search/Monastiraki+Flea+Market+Athens" target="_blank">📍 Map</a></span>
+            </li>
+            <li>
+              <span class="act-name">🏘️ Plaka Neighborhood — Athens' oldest & most charming district</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.thisisathens.org/neighbourhoods/plaka" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Plaka+Athens+Greece" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🏺 Ancient Agora & Temple of Hephaestus</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.agathe.gr/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Ancient+Agora+Athens+Greece" target="_blank">📍 Map</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card coral-border full-width">
+          <div class="card-title"><span class="icon">🇺🇸</span> U.S. Embassy — Greece</div>
+          <div class="embassy-name">U.S. Embassy Athens</div>
+          <div class="embassy-addr">📍 91 Vasilissis Sophias Avenue, 10160 Athens, Greece &nbsp;|&nbsp; 📞 (+30) 210 721 2951</div>
+          <div class="embassy-links">
+            <a class="emb-link web" href="https://gr.usembassy.gov/" target="_blank">🌐 Official Site</a>
+            <a class="emb-link map" href="https://www.google.com/maps/search/US+Embassy+91+Vasilissis+Sophias+Athens+Greece" target="_blank">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SANTORINI -->
+<div id="santorini" class="section-wrap">
+  <div class="destination">
+    <div class="dest-image-wrap">
+      <img src="https://images.unsplash.com/photo-1469796466635-455ede028aca?w=1200&q=80" alt="Santorini" onerror="this.src='https://images.unsplash.com/photo-1509233725247-49e657c54213?w=1200&q=80'">
+      <div class="overlay"></div>
+      <div class="dest-header">
+        <div class="dest-title">
+          <div class="country">🇬🇷 Greece — Cyclades</div>
+          <span class="tag-badge tag-cruise">Cruise Day 5 · Port Stop</span>
+          <h2>Santorini</h2>
+        </div>
+        <div class="date-badge">Wed July 22 · 7am–7pm</div>
+      </div>
+    </div>
+    <div class="dest-body">
+      <div class="dest-grid">
+        <div class="info-card">
+          <div class="card-title"><span class="icon">🚌</span> Port Transportation</div>
+          <div class="transport-item"><span class="transport-icon">🚡</span><span class="transport-text">Cable car from Old Port → Fira: <span class="transport-cost">€10 each way</span> · 3 min · Book early or queue early</span></div>
+          <div class="transport-item"><span class="transport-icon">🚌</span><span class="transport-text">Local KTEL buses: Fira → Oia or other villages <span class="transport-cost">€1.80</span> · Purchase on bus</span></div>
+          <div class="transport-item"><span class="transport-icon">🛵</span><span class="transport-text">ATV/Scooter rental: <span class="transport-cost">~€25–40/day</span> · Best for island exploration</span></div>
+          <div class="transport-item"><span class="transport-icon">💡</span><span class="transport-text">Disembark ~10:30am to avoid cable car crowds. Ships tender to Old Port.</span></div>
+        </div>
+
+        <div class="info-card green-border">
+          <div class="card-title"><span class="icon">🗺️</span> Top Highlights</div>
+          <ul class="activities-list">
+            <li>
+              <span class="act-name">🏙️ Oia Village — blue-domed churches, iconic sunset views</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.santorini.net/villages/oia/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Oia+Santorini+Greece" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🌋 Caldera Views from Fira — the volcanic cliffs</span>
+              <span class="act-links"><a class="act-link map" href="https://www.google.com/maps/search/Santorini+Caldera+Greece" target="_blank">📍 Map</a></span>
+            </li>
+            <li>
+              <span class="act-name">🏖️ Perissa Black Sand Beach</span>
+              <span class="act-links"><a class="act-link map" href="https://www.google.com/maps/search/Perissa+Black+Sand+Beach+Santorini" target="_blank">📍 Map</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card coral-border full-width">
+          <div class="card-title"><span class="icon">🇺🇸</span> U.S. Embassy — Greece (same for Santorini)</div>
+          <div class="embassy-name">U.S. Embassy Athens</div>
+          <div class="embassy-addr">📍 91 Vasilissis Sophias Avenue, 10160 Athens, Greece &nbsp;|&nbsp; 📞 (+30) 210 721 2951</div>
+          <div class="embassy-links">
+            <a class="emb-link web" href="https://gr.usembassy.gov/" target="_blank">🌐 Official Site</a>
+            <a class="emb-link map" href="https://www.google.com/maps/search/US+Embassy+91+Vasilissis+Sophias+Athens+Greece" target="_blank">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AT SEA DAY 2 -->
+<div class="section-wrap">
+  <div class="at-sea">
+    <div class="sea-icon">🌊</div>
+    <div>
+      <h3>Day at Sea — Thursday, July 23</h3>
+      <p>Another relaxing day at sea as the ship heads northwest toward Croatia. Enjoy the pool, spa, evening shows, and fine dining before arriving in Zadar.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ZADAR -->
+<div id="zadar" class="section-wrap">
+  <div class="destination">
+    <div class="dest-image-wrap">
+      <img src="https://images.unsplash.com/photo-1601370690183-1c7796ecec61?w=1200&q=80" alt="Zadar Croatia" onerror="this.src='https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=1200&q=80'">
+      <div class="overlay"></div>
+      <div class="dest-header">
+        <div class="dest-title">
+          <div class="country">🇭🇷 Croatia — Dalmatia</div>
+          <span class="tag-badge tag-cruise">Cruise Day 7 · Port Stop</span>
+          <h2>Zadar</h2>
+        </div>
+        <div class="date-badge">Fri July 24 · 12pm–8pm</div>
+      </div>
+    </div>
+    <div class="dest-body">
+      <div class="dest-grid">
+        <div class="info-card">
+          <div class="card-title"><span class="icon">🚌</span> Port Transportation</div>
+          <div class="transport-item"><span class="transport-icon">🚌</span><span class="transport-text">City Bus #9 (Liburnija): Port → city center — <span class="transport-cost">€2–5</span></span></div>
+          <div class="transport-item"><span class="transport-icon">📱</span><span class="transport-text">Bolt: <span class="transport-cost">~€8–12</span> from port to Old Town (cheaper than standard taxi)</span></div>
+          <div class="transport-item"><span class="transport-icon">🚌</span><span class="transport-text">Port shuttle: <span class="transport-cost">€12–15 roundtrip</span> — drops at Sea Organ</span></div>
+          <div class="transport-item"><span class="transport-icon">💡</span><span class="transport-text">Croatia uses Euros 🇪🇺 since Jan 2023 — no currency exchange needed!</span></div>
+        </div>
+
+        <div class="info-card green-border">
+          <div class="card-title"><span class="icon">🗺️</span> Activities</div>
+          <ul class="activities-list">
+            <li>
+              <span class="act-name">🏘️ Zadar Old Town — Roman ruins, medieval churches, stunning promenade</span>
+              <span class="act-links">
+                <a class="act-link web" href="https://www.zadar.hr/en/" target="_blank">🌐 Website</a>
+                <a class="act-link map" href="https://www.google.com/maps/search/Zadar+Old+Town+Croatia" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">🌊 Sea Organ (Morske Orgulje) — world-famous wave-powered instrument</span>
+              <span class="act-links">
+                <a class="act-link map" href="https://www.google.com/maps/search/Sea+Organ+Zadar+Croatia" target="_blank">📍 Map</a>
+              </span>
+            </li>
+            <li>
+              <span class="act-name">☀️ Greeting to the Sun (Pozdrav Suncu) — solar-powered light installation</span>
+              <span class="act-links">
+                <a class="act-link map" href="https://www.google.com/maps/search/Greeting+to+the+Sun+Zadar+Croatia" target="_blank">📍 Map</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card coral-border full-width">
+          <div class="card-title"><span class="icon">🇺🇸</span> U.S. Embassy — Croatia</div>
+          <div class="embassy-name">U.S. Embassy Zagreb</div>
+          <div class="embassy-addr">📍 Ulica Thomasa Jeffersona 2, 10010 Zagreb, Croatia &nbsp;|&nbsp; 📞 +385-1-661-2200</div>
+          <div class="embassy-links">
+            <a class="emb-link web" href="https://hr.usembassy.gov/" target="_blank">🌐 Official Site</a>
+            <a class="emb-link map" href="https://www.google.com/maps/search/US+Embassy+Thomas+Jefferson+Zagreb+Croatia" target="_blank">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LISBON -->
+<div id="lisbon" class="section-wrap">
+  <div class="destination">
+    <div class="dest-image-wrap">
+      <img src="https://images.unsplash.com/photo-1588640859524-834b5e618bb7?w=1200&q=80" alt="Lisbon Portugal" onerror="this.src='https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=1200&q=80'">
+      <div class="overlay"></div>
+      <div class="dest-header">
+        <div class="dest-title">
+          <div class="country">🇵🇹 Portugal</div>
+          <span class="tag-badge tag-cruise">Cruise Day 8 · Disembarkation</span>
+          <h2>Lisbon</h2>
+        </div>
+        <div class="date-badge">Saturday, July 25, 2026</div>
+      </div>
+    </div>
+    <div class="dest-body">
+      <div class="dest-grid">
+        <div class="info-card gold-border">
+          <div class="card-title"><span class="icon">🏨</span> Hotel</div>
+          <div class="hotel-name">Radisson Blu Hotel Lisbon</div>
+          <a class="map-link" href="https://www.google.com/maps/search/Radisson+Blu+Hotel+Lisbon+Portugal" target="_blank">📍 View on Google Maps</a>
+          <a class="map-link" href="https://www.radissonhotels.com/en-us/hotels/radisson-blu-lisbon" target="_blank" style="margin-top:6px;">🌐 Hotel Website</a>
+        </div>
+
+        <div class="info-card">
+          <div class="card-title"><span class="icon">🚌</span> Port → Hotel & City</div>
+          <div class="transport-item"><span class="transport-icon">🚶</span><span class="transport-text">Walk: Port (Santa Apolónia / Jardim do Tabaco) is ~10 min walk to historic center</span></div>
+          <div class="transport-item"><span class="transport-icon">🎫</span><span class="transport-text">24h transit pass: <span class="transport-cost">€6.00</span> — covers Metro, tram, bus all day</span></div>
+          <div class="transport-item"><span class="transport-icon">🚃</span><span class="transport-text">Historic Trams (28, 12): <span class="transport-cost">€1.50/ride</span> — charming way through Alfama & Baixa</span></div>
+          <div class="transport-item"><span class="transport-icon">📱</span><span class="transport-text">Uber/Bolt: <span class="transport-cost">~€10–15</span> within city — reliable & affordable</span></div>
+        </div>
+
+        <div class="info-card coral-border full-width">
+          <div class="card-title"><span class="icon">🇺🇸</span> U.S. Embassy — Portugal</div>
+          <div class="embassy-name">U.S. Embassy Lisbon</div>
+          <div class="embassy-addr">📍 Av. das Forças Armadas 133C, 1600-081 Lisboa, Portugal &nbsp;|&nbsp; 📞 +351-21-727-3300</div>
+          <div class="embassy-links">
+            <a class="emb-link web" href="https://pt.usembassy.gov/" target="_blank">🌐 Official Site</a>
+            <a class="emb-link map" href="https://www.google.com/maps/search/US+Embassy+Av+das+Forcas+Armadas+Lisbon+Portugal" target="_blank">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RETURN FLIGHT -->
+<div class="section-wrap" style="padding-bottom: 60px;">
+  <div class="special-card" id="flight-return">
+    <div class="flight-card">
+      <div class="flight-icon">🏠</div>
+      <div class="flight-info">
+        <h3>Return Flight</h3>
+        <div class="flight-route">
+          <div>
+            <div class="flight-city">LIS</div>
+            <div class="flight-detail">Lisbon Humberto Delgado</div>
+          </div>
+          <div class="flight-arrow">✈ ──────</div>
+          <div>
+            <div class="flight-city">ORD</div>
+            <div class="flight-detail">Chicago O'Hare</div>
+          </div>
+        </div>
+        <p>📅 Sunday, July 26, 2026 &nbsp;·&nbsp; ✈️ Direct flights available on TAP Air Portugal & United<br>
+        💡 <a href="https://www.google.com/flights" target="_blank" style="color:var(--sky)">Google Flights</a> · <a href="https://www.kayak.com" target="_blank" style="color:var(--sky)">Kayak</a> · <a href="https://www.flytap.com" target="_blank" style="color:var(--sky)">TAP Air Portugal</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p style="font-size:1.1rem; color:var(--gold); margin-bottom:8px;">🌍 Europe Cruise 2026 &nbsp;·&nbsp; July 10–26</p>
+  <p>Chicago → Milan · Lugano · Bolzano/Dolomites · Bologna · Venice 🚢 Kotor · Athens · Santorini · Zadar · Lisbon → Chicago</p>
+  <p style="margin-top:12px; color:#778;">
+    🚨 <strong>Emergency:</strong> U.S. Citizens Abroad: <a href="https://travel.state.gov/content/travel/en/international-travel/emergencies/emergency-abroad.html">travel.state.gov</a> &nbsp;·&nbsp;
+    STEP Program: <a href="https://step.state.gov/">step.state.gov</a> (enroll before traveling) &nbsp;·&nbsp;
+    Travel Advisories: <a href="https://travel.state.gov">travel.state.gov</a>
+  </p>
+  <p style="margin-top:10px; color:#556;">Built with ❤️ for Carlos · 2026</p>
+</footer>
+
+</body>
+</html>
